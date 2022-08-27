@@ -1,6 +1,6 @@
 # NNAPI delegate issue with DepthwiseConv2D nodes
 
-This repo contains scripts and a tool to reproduce the NNAPI delegate issue with models containing DepthwiseConv2D nodes. Our experiments have revealed that DepthwiseConv2D nodes are one of the most problematic nodes when using NNAPI delegate. Here is a summary of our findings:
+This repo contains scripts and a tool to reproduce the NNAPI delegate issue with models containing DepthwiseConv2D nodes. Our experiments have revealed that DepthwiseConv2D nodes generate a multitude of problems when using NNAPI delegate. Here is a summary of our findings:
 
 1. Inferring DepthwiseConv2D nodes with XNNPACK delegate is always faster than the NNAPI delegate (tested on Snapdragon 855 and Snapdragon 865 - Android 12).
 2. On devices with Snapdragon 888 (tested with Android 12), INT8 models starting with a DepthwiseConv2D node always crash with the NNAPI delegate. 
